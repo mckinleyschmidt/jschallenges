@@ -2,19 +2,6 @@
 <html lang="en">
 <head>
 <!-- 
-Step 1: Add a JavaScript function to your page called setHomeAddress() that simply logs a message,e.g. console.log("Yep, my function is being called");  Add an event so that when the checkbox is clicked your function is called and test that it works!
-
-Step 2: Get the Postal Address
-Before you can copy the address, we need to know how to read it using JavaScript.  Use the .value property of the textarea. It contains the text typed into a form field. In your setHomeAddress() function, write a line of code to display the Postal Address textarea's value in the console. W3Schools Textarea value page has a useful example close to what you'll write.
-
-Step 3: Set the value for the Home Address
-Now that you know how to find the value of any element in our document, the trick is to set our "home" address value equal to the "billing" Address. 
-
-To get started, hardcode the homeaddress to something. document.getElementById("home").value = "Hi there"; or
-document.querySelector("#home").value = "Hi there";
-Test and see if it works! You should find that when you click on your checkbox, the home address is set to the text "Hi there".
-Now see if you can modify the above line so that instead of placing "Hi there" in the box, it puts the value of the billing address field.
-
 Step 4: Disable the Home Address field
 When the home address is set to the billing address you shouldn't be able to update it.  Use the W3Schools page about the HTML DOM TextArea object and see if you can find a property that will allow us to disable the textarea.
 
@@ -29,13 +16,51 @@ Add an if-else statement to your setHomeAddress() function so that when the chec
     <script>
 	   function setHomeAddress(){
       // YOUR  JavaScript CODE HERE
+      //Step 1: Add a JavaScript function to your page called setHomeAddress() that simply logs a message,e.g. console.log("Yep, my function is being called");  Add an event so that when the checkbox is clicked your function is called and test that it works!
+      console.log("this is functioning")
+      console.log(document.querySelector("#useBilling").checked)
+      var bill = document.querySelector("#bill")
+      var home = document.querySelector("#home")
+
+      //Step 2: Get the Postal Address
+      //Before you can copy the address, we need to know how to read it using JavaScript.  Use the .value property of the textarea. It contains the text typed into a form field. In your setHomeAddress() function, write a line of code to display the Postal Address textarea's value in the console. W3Schools Textarea value page has a useful example close to what you'll write.
+      console.log(bill.value)
+
+      //Step 3: Set the value for the Home Address
+      //Now that you know how to find the value of any element in our document, the trick is to set our "home" address value equal to the "billing" Address. 
+      //To get started, hardcode the homeaddress to something. document.getElementById("home").value = "Hi there"; or document.querySelector("#home").value = "Hi there";
+      //Test and see if it works! You should find that when you click on your checkbox, the home address is set to the text "Hi there".
+      //home.value = "hello";
+      //Now see if you can modify the above line so that instead of placing "Hi there" in the box, it puts the value of the billing address field.
+
+      //Step 4: Disable the Home Address field
+      //When the home address is set to the billing address you shouldn't be able to update it.  Use the W3Schools page about the HTML DOM TextArea object and see if you can find a property that will allow us to disable the textarea.
+      //Try setting this property for your "homeaddress" element in your setHomeAddress() function. Make sure you test it out!
+
+      //Step 5: Toggling the Home Address
+      //Now when you test your form, you'll notice that when you un-check your checkbox, the home address field isn't enabled.
+      //Add an if-else statement to your setHomeAddress() function so that when the checkbox is un-checked the Home address field is reset to empty and enabled again.
+      if (document.querySelector("#useBilling").checked){
+        home.value = bill.value;
+        home.disabled = true;
+      }
+      else{
+        home.value = "";
+        home.disabled = false;
+      }
+      
+      //home.disabled = true;
+
+      
+
+
      }
     </script>
 </head>
 <body>
     <h1>Challenge Two</h1>
     <!-- UPDATE THE ACTION -->
-    <form action="">
+    <form action="challenge3.html">
       <fieldset>
         <legend>Billing Information</legend>
         <div>
