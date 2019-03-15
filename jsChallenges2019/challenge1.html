@@ -2,27 +2,34 @@
 <html lang="en">
   <head>
     <title>JavaScript Challenges</title>
-<!-- Step 1: Add some plain old CSS style so that the "emailfield" paragraph isn't displayed when the page first loads.  You can use the CSS 'display' property. Test to make sure this works.
-
-Step 2: Create a new function called toggleEmail() that simply displays an message to the console, e.g. console.log("Yep, my function is being called"); 
-
-Step 3: Add an event so that when the checkbox is clicked your function is called and test that it works! 
-
-Step 4: Display the email fields
-Now add code so that our function actually does something useful! Using JavaScript, make the emailfield paragraph appear when the checkbox is clicked.  You will probably want to change the display property.
-
-Step 4: Enable toggling.
-When you test your form at the moment, you'll notice that you can click on the checkbox and the email field displays, but when you un-check the checkbox the extra paragraph doesn't hide itself again!  Use the "checked" property to test whether a checkbox was checked.  Then use an if statement to toggle the emailfield appear and disappear as appropriate.
--->
-
-
+<!-- Step 1: Add some plain old CSS style so that the "emailfield" paragraph isn't displayed when the page first loads.  You can use the CSS 'display' property. Test to make sure this works. -->
     <style>
     /*    YOUR CSS CODE HERE */ 
+    #emailfield{
+      display: none;
+    }
     </style>
-    
+
+<!-- Step 2: Create a new function called toggleEmail() that simply displays an message to the console, e.g. console.log("Yep, my function is being called"); -->     
     <script>
 	function toggleEmail(){
 		/*    YOUR JavaScript CODE HERE */ 
+    console.log("This is working")
+
+    /* Step 4: Display the email fields
+Now add code so that our function actually does something useful! Using JavaScript, make the emailfield paragraph appear when the checkbox is clicked.  You will probably want to change the display property. */
+    
+
+    /* Step 5: Enable toggling.
+When you test your form at the moment, you'll notice that you can click on the checkbox and the email field displays, but when you un-check the checkbox the extra paragraph doesn't hide itself again!  Use the "checked" property to test whether a checkbox was checked.  Then use an if statement to toggle the emailfield appear and disappear as appropriate. */
+    /*var check = document.getElementById("subscribe").checked = true;*/
+    if (document.querySelector("#subscribe").checked){
+      document.getElementById("emailfield").style.display = "block";
+    }
+    else{
+      document.getElementById("emailfield").style.display = "none";
+    }
+
 
 	} 
     </script>
@@ -30,9 +37,10 @@ When you test your form at the moment, you'll notice that you can click on the c
   <body>
     <h1>Challenge One</h1>
     <!-- UPDATE THE ACTION -->
-    <form action="">
+    <form action="challenge2.html">
       <fieldset>
         <legend>Email subscriptions</legend>
+        <!-- Step 3: Add an event so that when the checkbox is clicked your function is called and test that it works! -->
         <div id="check">
           <label>
             <input type="checkbox" name="subscribe" id="subscribe" onchange="toggleEmail()">
