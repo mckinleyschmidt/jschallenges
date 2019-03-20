@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Challenge 5</title>
+    <title>Challenge 4</title>
     <style>
     body{
         margin: 2%;
@@ -39,30 +39,77 @@
     <script>
     // I used Two functions here.  Starter idea at: 
     // https://codepen.io/ColleenEMc/pen/XmZzWw
+    function upDate(element){
+        console.log("this is working")
+
+        var hvrBox = document.getElementById('image');
+        var pics = element.src;
+
+        hvrBox.style.backgroundImage = "url(" + pics + ")";
+        hvrBox.innerHTML = element.alt;
+
+
+    }
+
+    function unDo(){
+        console.log("this is working")
+
+        var hvrBox = document.getElementById('image');
+
+        hvrBox.style.backgroundImage = null;
+        hvrBox.innerHTML='Hover or tab over/into an image below.';
+
+    }
     </script>
 </head>
 
 <body>
-    <h1>Challenge 5</h1>
+    <h1>Challenge 4</h1>
         <div id = "image">
             Hover or tab over/into an image below.
         </div>
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img class = "preview" 
+        <img class = "preview" tabindex = "1"
             alt = "Styling with a Bandana" 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg">
+            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg" onmouseover="upDate(this)" onfocus="upDate(this)" onmouseleave="unDo()" onblur="unDo()">
 
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
-        <img class = "preview" 
+        <img class = "preview" tabindex = "1" 
             alt = "With My Boy" 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG">
+            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG" onmouseover="upDate(this)" onfocus="upDate(this)" onmouseleave="unDo()" onblur="unDo()">
     
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
         <img class = "preview" tabindex = "1" 
             src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" 
-            alt = "Young Puppy">
+            alt = "Young Puppy" onmouseover="upDate(this)" onfocus="upDate(this)" onmouseleave="unDo()" onblur="unDo()">
+
+        <hr>
+
+        <img class = "preview" tabindex = "1"
+            alt = "black kittens" 
+            src = "https://66.media.tumblr.com/079aabc1ed954b0d69bc83860e1b7a43/tumblr_oc7pa1Fgk71uk274do1_500.jpg" onmouseover="upDate(this)" onfocus="upDate(this)" onmouseleave="unDo()" onblur="unDo()">
+
+        <img class = "preview" tabindex = "1"
+            alt = "grief clown" 
+            src = "https://66.media.tumblr.com/aa7bdddfb9c45ef2d1d0f168933c4674/tumblr_opndbrGlTT1rt05b1o1_400.jpg" onmouseover="upDate(this)" onfocus="upDate(this)" onmouseleave="unDo()" onblur="unDo()">
+
+        <img class = "preview" tabindex = "1"
+            alt = "sun and moon" 
+            src = "https://66.media.tumblr.com/e4f42d169c907df0d51fbc31fa5f1042/tumblr_ooryor5l9z1vja90so1_500.jpg" onmouseover="upDate(this)" onfocus="upDate(this)" onmouseleave="unDo()" onblur="unDo()">
+
+        <img class = "preview" tabindex = "1"
+            alt = "fancy drinks" 
+            src = "https://66.media.tumblr.com/06c7e5820d4999c97f51c2df0dd4e3d0/tumblr_nnbgs5JU541rmawono1_500.jpg" onmouseover="upDate(this)" onfocus="upDate(this)" onmouseleave="unDo()" onblur="unDo()">
+
+        <img class = "preview" tabindex = "1"
+            alt = "red rose" 
+            src = "https://66.media.tumblr.com/7cd35d50c307d903fcbd8e8c2db6d42b/tumblr_n10vpsAwzv1qizkd1o1_500.jpg" onmouseover="upDate(this)" onfocus="upDate(this)" onmouseleave="unDo()" onblur="unDo()">
+
+        <img class = "preview" tabindex = "1"
+            alt = "mysterious owl" 
+            src = "https://66.media.tumblr.com/61a93f9f1aae62be583eed6f552f4208/tumblr_o0pcl0VULg1uzgmgbo1_500.jpg" onmouseover="upDate(this)" onfocus="upDate(this)" onmouseleave="unDo()" onblur="unDo()">
 </body>
 </html>
     
